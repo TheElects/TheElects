@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | The Elects Apostolic Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-XZizKHgF/XDA75G8pKoIKQyWcd7zw0DByDLd5Z3xlIgS7hFz1MZitN4H7Kh5rbS8r6fB/UPsqAFl3gM3EKGVYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Light background color for contrast */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            text-align: left; /* Align text to the left for better readability */
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white; /* Ensures the footer text color is white */
+        }
+        .icon {
+            margin-right: 10px; /* Space between icon and text */
+            font-size: 1.5rem; /* Adjust icon size */
+            color: #ff9800; /* Match icon color with your theme */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="aim.html">Aim</a>
+            <a href="history.html">History</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+        <a href="../index.html"><img src="../logo2.png" alt="The Elects Apostolic Church"></a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1>Our Promise</h1>
+        <p>At TEAC, we function with the two foundational truths: <i>all that you seek is within</i>, and that <i>all that exists is of spiritual origin</i>. With these principles at our core, we offer guidance and support to foster your journey of self-discovery and spiritual growth. We:</p>
+        
+        <div id="serviceCards">
+            <div class="card"><span class="icon"><i class="fas fa-star"></i></span> Illuminate the unique gifts bestowed upon you by your angels,</div>
+            <div class="card"><span class="icon"><i class="fas fa-heart"></i></span> Help heal, reconcile, or strengthen your connection with your angels,</div>
+            <div class="card"><span class="icon"><i class="fas fa-dove"></i></span> Support your understanding of how your angels communicate with you,</div>
+            <div class="card"><span class="icon"><i class="fas fa-comments"></i></span> Equip you with the knowledge to converse meaningfully with your angels,</div>
+            <div class="card"><span class="icon"><i class="fas fa-water"></i></span> Facilitate spiritual cleansing, bringing renewal and upliftment to your daily life,</div>
+            <div class="card"><span class="icon"><i class="fas fa-seedling"></i></span> Nurture your self-awareness as a spiritual being, setting you on a transformative path to inner understanding and purpose.</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-family: Arial, sans-serif; font-size: 1rem; margin: 0; color: white;">&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 300); // Stagger the appearance of each card
+            });
+        });
+    </script>
+</body>
+</html>

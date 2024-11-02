@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Elects Apostolic Church</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('../spikes.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        header img {
+            max-width: 200px;
+        }
+        .content {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+        }
+        .state-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .state-nav a {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .state-nav a:hover, .state-nav a:focus {
+            background-color: #ff9800;
+            color: white;
+        }
+        .contact-section {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+        .state-heading {
+            font-size: 28px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .member {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: scale(1.02);
+        }
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .member-info {
+            color: #333;
+            text-align: left;
+        }
+        .member-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .contact-details {
+            font-size: 16px;
+            margin: 5px 0 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+#backToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    background-color: #333;
+    color: white;
+    border: 2px solid #333; /* Outer border to match button color */
+    outline: 2px solid white; /* White inner border for contrast */
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#backToTopButton:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="aim.html">Aim</a>
+        <a href="history.html">History</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="podcasts.html">Podcasts</a>
+    </nav>
+    <a href="../index.html"><img src="../logo2.png" alt="The Elects Apostolic Church"></a>
+</header>
+
+<div class="content">
+    <p>If you’d like to reach out to a specific member of The Elects Apostolic Church, you can find their contact information below, organised by city. Each member is available to help with guidance, spiritual support, and more.</p>
+
+    <!-- State Navigation Buttons (Tabs) -->
+    <div class="state-nav">
+        <a href="#state1">Pretoria</a>
+        <a href="#state2">Johannesburg</a>
+        <a href="#state3">Daveyton</a>
+        <a href="#state4">Secunda</a>
+        <a href="#state5">Piet Retief</a>
+        <a href="#state6">Moloto</a>
+        <a href="#state7">Vezubuhle</a>
+        <a href="#state8">Lithuli</a>
+        <a href="#state9">Witbank</a>
+        <a href="#state10">Thlabane</a>
+        <a href="#state11">Mogwase</a>
+        <a href="#state12">Mafikeng</a>
+        <a href="#state13">Penar</a>
+        <a href="#state14">Makhonjwa</a>
+        <a href="#state15">Polokwane</a>
+        <a href="#state16">Groblersdal</a>
+        <!-- Add more states as needed -->
+    </div>
+</div>
+
+<div class="contact-section">
+    <!-- State 1 -->
+    <h2 id="state1" class="state-heading">Pretoria</h2>
+    <div class="member">
+        <img src="members/member1.jpg" alt="Member1 Picture">
+        <div class="member-info">
+            <p class="member-name">Mr Mothiba</p>
+            <p class="contact-details">Phone: 071-079-4488<br>Email: member1@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member2.jpg" alt="Member2 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 2</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 2 -->
+    <h2 id="state2" class="state-heading">Johannesburg</h2>
+    <div class="member">
+        <img src="members/member3.jpg" alt="Member3 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 3</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member4.jpg" alt="Member4 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 4</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 3 -->
+    <h2 id="state3" class="state-heading">Daveyton</h2>
+    <div class="member">
+        <img src="members/member5.jpg" alt="Member5 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 5</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member6.jpg" alt="Member6 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 6</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+    
+    <!-- State 4 -->
+    <h2 id="state4" class="state-heading">Secunda</h2>
+    <div class="member">
+        <img src="members/member7.jpg" alt="Member7 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 7</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member8.jpg" alt="Member8 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 8</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 5 -->
+    <h2 id="state5" class="state-heading">Piet Retief</h2>
+    <div class="member">
+        <img src="members/member9.jpg" alt="Member9 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 9</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member10.jpg" alt="Member10 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 10</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 6 -->
+    <h2 id="state6" class="state-heading">Moloto</h2>
+    <div class="member">
+        <img src="members/member11.jpg" alt="Member11 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 11</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member12.jpg" alt="Member12 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 12</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 7 -->
+    <h2 id="state7" class="state-heading">Vezubuhle</h2>
+    <div class="member">
+        <img src="members/member13.jpg" alt="Member13 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 13</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member14.jpg" alt="Member14 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 14</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 8 -->
+    <h2 id="state8" class="state-heading">Lithuli</h2>
+    <div class="member">
+        <img src="members/member15.jpg" alt="Member15 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 15</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member16.jpg" alt="Member16 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 16</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 9 -->
+    <h2 id="state9" class="state-heading">Witbank</h2>
+    <div class="member">
+        <img src="members/member17.jpg" alt="Member17 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 17</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member18.jpg" alt="Member18 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 18</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 10 -->
+    <h2 id="state10" class="state-heading">Thlabane</h2>
+    <div class="member">
+        <img src="members/member19.jpg" alt="Member19 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 19</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member20.jpg" alt="Member20 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 20</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 11 -->
+    <h2 id="state11" class="state-heading">Mogwase</h2>
+    <div class="member">
+        <img src="members/member21.jpg" alt="Member21 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 21</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member22.jpg" alt="Member22 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 22</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 12 -->
+    <h2 id="state12" class="state-heading">Mafikeng</h2>
+    <div class="member">
+        <img src="members/member23.jpg" alt="Member23 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 23</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member24.jpg" alt="Member24 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 24</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+        </div>
+    </div>
+
+    <!-- State 13 -->
+    <h2 id="state13" class="state-heading">Penar</h2>
+    <div class="member">
+        <img src="members/member25.jpg" alt="Member25 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 25</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member26.jpg" alt="Member26 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 26</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+	</div>
+    </div>
+
+    <!-- State 14 -->
+    <h2 id="state14" class="state-heading">Makhonjwa</h2>
+    <div class="member">
+        <img src="members/member27.jpg" alt="Member27 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 27</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member28.jpg" alt="Member28 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 28</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+	</div>
+    </div>
+
+    <!-- State 15 -->
+    <h2 id="state15" class="state-heading">Polokwane</h2>
+    <div class="member">
+        <img src="members/member29.jpg" alt="Member29 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 29</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member30.jpg" alt="Member30 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 30</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+	</div>
+    </div>
+
+    <!-- State 16 -->
+    <h2 id="state16" class="state-heading">Groblersdal</h2>
+    <div class="member">
+        <img src="members/member31.jpg" alt="Member31 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 31</p>
+            <p class="contact-details">Phone: 345-678-9012<br>Email: member3@teac.org</p>
+        </div>
+    </div>
+    <div class="member">
+        <img src="members/member32.jpg" alt="Member32 Picture">
+        <div class="member-info">
+            <p class="member-name">Member 32</p>
+            <p class="contact-details">Phone: 234-567-8901<br>Email: member2@teac.org</p>
+	</div>
+    </div>
+
+
+
+    <!-- Additional states go here -->
+</div> <!-- Close contact-section -->
+
+
+
+<footer>
+    <p>&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="backToTopButton" title="Go to top">Top</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

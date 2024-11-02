@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Information | The Elects Apostolic Church</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('../spikes.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        header img {
+            max-width: 200px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .service-info {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden; /* Prevent overflow from the gradient */
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('service.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%); /* Apply grayscale effect */
+            z-index: 1; /* Set z-index below content */
+        }
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)); /* Black/grey gradient overlay */
+            z-index: 2; /* Ensure this is above the background image */
+        }
+        .service-info-content {
+            position: relative;
+            z-index: 3; /* Ensure this is above the gradient overlay */
+            color: white; /* Set text color to white for visibility */
+        }
+        .service-info-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="aim.html">Aim</a>
+            <a href="history.html">History</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+        <a href="../index.html"><img src="../logo2.png" alt="The Elects Apostolic Church"></a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="service-info">
+        <div class="background-image"></div>
+        <div class="gradient-overlay"></div>
+        <div class="service-info-content">
+            <h1>Service Information</h1>
+            <p>Welcome to the Service Information page of The Elects Apostolic Church.</p>
+            <p>Here, you will find details about our weekly services, special events, and community outreach programs.</p>
+            <p>Join us every Sunday at 8:45 AM for our lessons. Everyone is welcome!</p>
+            <p>For more information on our branch locations and upcoming events, please visit the 
+            <a href="contact.html" style="color: #ff9800;">Contact page</a>.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
+    </footer>
+</body>
+</html>

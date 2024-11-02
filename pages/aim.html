@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aims - The Elects Apostolic Church</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('../spikes.png'); /* Use your pattern image */
+            background-repeat: repeat; /* This repeats the pattern */
+            background-size: 100px 100px; /* Adjust the size as needed */
+            background-position: center; /* Center the pattern */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+    	    background-image: url('../so-white.png'); /* Use your pattern image */
+    	    background-repeat: repeat; /* This repeats the pattern */
+    	    background-size: 100px 100px; /* Adjust the size as needed */
+    	    background-position: center; /* Center the pattern */
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        header img {
+            max-width: 200px; /* Adjust logo size as needed */
+        }
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .aim-card {
+            background-color: #f9f9f9; /* Card background color */
+            border: 1px solid #ccc; /* Card border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Inner padding */
+            margin: 20px auto; /* Space between cards */
+            max-width: 800px; /* Increased max width of the cards */
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(20px); /* Start slightly lower */
+            animation: fadeInUp 0.5s forwards; /* Animation */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+        /* Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .aim-text {
+            font-family: 'Georgia', serif; /* Change to your desired font for aim text */
+            font-size: 18px; /* Adjust font size as needed */
+            margin-top: 10px;
+            line-height: 1.5; /* Adjust line height for readability */
+        }
+        /* Larger subheading styling */
+        .aim-card p:first-child {
+            font-size: 24px; /* Increase font size for subheadings */
+            font-weight: bold; /* Bold text for subheadings */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Zig-zag positioning */
+        .left {
+            margin-left: 10%; /* Adjust for left positioning */
+            text-align: left; /* Align text to the left */
+        }
+        .right {
+            margin-right: 10%; /* Adjust for right positioning */
+            text-align: left; /* Align text to the right */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="aim.html">Aim</a>
+        <a href="history.html">History</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="podcasts.html">Podcasts</a>
+    </nav>
+    <a href="../index.html"><img src="logo.png" alt="The Elects Apostolic Church"></a> <!-- Home embedded in logo -->
+</header>
+
+<div class="content">
+    <h1>Below are the aims of TEAC</h1>
+    
+    <div class="aim-card left" style="animation-delay: 0s;">
+        <p>1. Empowerment and Restoration of Spiritual Identity</p>
+        <p class="aim-text">To empower individuals to recognize and embrace their inherent spiritual divinity, fostering a community where members feel confident in their personal spiritual journeys.</p>
+    </div>
+    
+    <div class="aim-card right" style="animation-delay: 0.5s;">
+        <p>2. Connection to the Self</p>
+        <p class="aim-text">To facilitate profound connections between individuals and their celestial guardians, ensuring that each member feels supported and guided on their spiritual path.</p>
+    </div>
+    
+    <div class="aim-card left" style="animation-delay: 1s;">
+        <p>3. A Hub of Spiritual Knowledge</p>
+        <p class="aim-text">To establish TEAC as a leading center for learning and understanding African spirituality, where teachings are shared and preserved for future generations.</p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

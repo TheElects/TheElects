@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast | The Elects Apostolic Church</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('../spikes.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        header img {
+            max-width: 200px;
+        }
+        .content {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .podcast-coming-soon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            color: #333;
+            position: relative;
+        }
+
+        .coming-soon-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .notify-button {
+            padding: 0.8rem 1.5rem;
+            background-color: #333;
+            color: #fda085;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .notify-button:hover {
+            background-color: #f6d365;
+            color: #333;
+        }
+
+        /* Notify Form Styling */
+        .notify-form {
+            display: none; /* Initially hide the form */
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            position: absolute; /* Positioning form on top of the coming soon content */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .notify-form input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .notify-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .notify-form button:hover {
+            background-color: #fda085;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="aim.html">Aim</a>
+            <a href="history.html">History</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+        <a href="../index.html"><img src="../logo2.png" alt="The Elects Apostolic Church"></a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="podcast-coming-soon">
+        <div class="coming-soon-content">
+            <h1>🎙️ Podcast Coming Soon 🎉</h1>
+            <p>Stay tuned for our upcoming podcast, where we dive into spiritual journeys, explore African spirituality, and so much more. Get ready for insightful conversations and vibrant stories that empower and enlighten!</p>
+            <button class="notify-button" onclick="toggleNotifyForm()">Notify Me!</button>
+            
+            <!-- Notify Form -->
+            <div class="notify-form" id="notifyForm">
+                <input type="text" id="name" placeholder="Enter your Name" required>
+                <input type="email" id="email" placeholder="Enter your Email" required>
+                <button onclick="submitNotifyForm()">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNotifyForm() {
+            const form = document.getElementById('notifyForm');
+            form.style.display = form.style.display === 'flex' ? 'none' : 'flex'; // Toggle form visibility
+        }
+
+        function submitNotifyForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Email validation check
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return; // Stop the function if the email is not valid
+            }
+
+            // Prepare the data for submission
+            const data = new FormData();
+            data.append('name', name);
+            data.append('email', email);
+
+            // Send the data to the Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbwhDAxGe1FsKFQJsOOQBaLjkyqK0x0qtRmldt5fJkiA4Yn9agb0DKNOcwOOUEBdzDRqQQ/exec', { // Replace with your actual web app URL
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(`Thank you, ${name}! We will notify you at ${email} once we have podcasts ready!`);
+                toggleNotifyForm(); // Hide the form after submission
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your form. Please try again later.');
+            });
+        }
+    </script>
+</body>
+</html>
