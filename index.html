@@ -9,10 +9,10 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: white;
-    	    background-image: url('spikes.png'); /* Use your pattern image */
-    	    background-repeat: repeat; /* This repeats the pattern */
-    	    background-size: 100px 100px; /* Adjust the size as needed */
-    	    background-position: center; /* Center the pattern */
+            background-image: url('spikes.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
         }
         header {
             display: flex;
@@ -20,14 +20,16 @@
             align-items: center;
             padding: 10px;
             background-color: white;
-    	    background-image: url('so-white.png'); /* Use your pattern image */
-    	    background-repeat: repeat; /* This repeats the pattern */
-    	    background-size: 100px 100px; /* Adjust the size as needed */
-    	    background-position: center; /* Center the pattern */
+            background-image: url('so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+            flex-wrap: wrap;
         }
         nav {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
         nav a {
             text-decoration: none;
@@ -36,75 +38,67 @@
             cursor: pointer;
         }
         header img {
-            max-width: 200px; /* Adjust logo size as needed */
+            max-width: 200px;
         }
 
-        /* Hero Section with Video */
+        /* Hero Section */
         .hero-section {
             position: relative;
             text-align: center;
             color: white;
-            height: 67vh; /* Adjust the height as needed */
+            height: 67vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
         .hero-section video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-    	    filter: brightness(0.5); /* Reduce brightness by 50% */
+            filter: brightness(0.5);
             object-fit: cover;
             z-index: 1;
         }
-
         .hero-section h1, .hero-section button {
             position: relative;
             z-index: 2;
         }
-
         .hero-section h1 {
             margin-bottom: 20px;
         }
-
         .connect-btn {
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #ff9800; /* Orange button */
+            background-color: #ff9800;
             border: none;
             cursor: pointer;
             z-index: 2;
             margin-top: 20px;
         }
-
         .connect-btn:hover {
-            background-color: #e68900; /* Slightly darker orange on hover */
+            background-color: #e68900;
         }
-
-        /* Service Info Button Styling (similar to Connect) */
         .service-info-btn {
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #ff9800; /* Orange button */
+            background-color: #ff9800;
             border: none;
             cursor: pointer;
             z-index: 2;
             margin-top: 20px;
         }
-
         .service-info-btn:hover {
-            background-color: #e68900; /* Slightly darker orange on hover */
+            background-color: #e68900;
         }
 
         /* Connect Form Styling */
         #connectForm {
-            display: none; /* Initially hidden */
+            display: none;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -113,19 +107,16 @@
             padding: 20px;
             border: 1px solid #333;
             z-index: 1000;
-            width: 300px; /* Set width for the form */
+            width: 300px;
         }
         #connectForm input, #connectForm textarea {
-            width: calc(100% - 20px); /* Add space on the right */
+            width: calc(100% - 20px);
             padding: 10px;
             margin: 10px 0;
-            box-sizing: border-box; /* Include padding in width calculation */
-        }
-        #connectForm textarea {
-            resize: none; /* Prevent resizing of the textarea */
+            box-sizing: border-box;
         }
         #overlay {
-            display: none; /* Overlay for form */
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -135,25 +126,21 @@
             z-index: 500;
         }
 
-        /* Gallery Styling */
+        /* Responsive Gallery Styling */
         .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 50px;
         }
         .gallery div {
-            position: relative; /* Allow positioning of text over the images */
+            position: relative;
         }
-        .gallery img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        .gallery img:hover {
-            opacity: 0.8;
+        .gallery img {            
+    	    height: 250px; /* Set the desired height for all images */
+    	    width: 300px; /* Adjust width automatically to maintain aspect ratio */
+  	    object-fit: cover;
+	    cursor: pointer;
         }
         .gallery h3 {
             position: absolute;
@@ -163,7 +150,7 @@
             color: white;
             text-shadow: 2px 2px 5px black;
             font-size: 24px;
-            margin: 0; /* Remove default margin */
+            margin: 0;
         }
 
         footer {
@@ -172,16 +159,14 @@
             background-color: #333;
             color: white;
         }
-
         footer button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #ff9800; /* Matching button color */
+            background-color: #ff9800;
             border: none;
             color: white;
             cursor: pointer;
         }
-
         footer p {
             margin: 0;
         }
@@ -198,62 +183,32 @@
         <a href="pages/contact.html">Contact</a>
         <a href="pages/podcasts.html">Podcasts</a>
     </nav>
-    <a href="index.html"><img src="logo2.png" alt="The Elects Apostolic Church"></a> <!-- Home embedded in logo -->
+    <a href="index.html"><img src="logo2.png" alt="The Elects Apostolic Church"></a>
 </header>
 
 <div class="hero-section">
-    <video autoplay muted loop playsinline disablePictureInPicture style="width: 100%; height: 100%; object-fit: cover;">
+    <video autoplay muted loop playsinline disablePictureInPicture>
         <source src="sample video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <h1>Welcome to The Elects Apostolic Church<h1>
+    <h1>Welcome to The Elects Apostolic Church</h1>
     <p>We aim to heal the world by spiritually cleansing one's angels (<i>abokhokho</i>).</p>
-    <button class="connect-btn" onclick="showForm()">Connect</button>
+    <button class="connect-btn" onclick="showForm()">Talk to us!</button>
 </div>
 
-<!-- Connect Form Popup -->
 <div id="overlay"></div>
 <div id="connectForm">
     <h2>Message The Elects Apostolic Church!</h2>
-<form id="contactForm">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <textarea name="message" placeholder="Message or Comment" rows="4"></textarea>
-    <button type="submit">Submit</button>
-    <button type="button" class="close-button" onclick="hideForm()">Close</button>
-</form>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    const formData = new FormData(this);
-    const url = "https://script.google.com/macros/s/AKfycbzOF5Ww9BFooeSlS8UCYeCpwZPj89lxl_hvMwmchdMuI4l-B88NEyxCBTdOPIb7MF70-w/exec"; // Replace with your Google Apps Script URL
-
-    try {
-        const response = await fetch(url, {
-            method: "POST",
-            body: formData
-        });
-
-        if (response.ok) {
-            // Show success message in a pop-up
-            alert("Thank you! Your message has been successfully submitted.");
-            this.reset(); // Clear the form
-        } else {
-            alert("There was an issue with the form submission. Please try again.");
-        }
-    } catch (error) {
-        console.error("Error submitting form:", error);
-        alert("There was an error submitting the form. Please try again.");
-    }
-});
-</script>
-
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Message or Comment" rows="4"></textarea>
+        <button type="submit">Submit</button>
+        <button type="button" class="close-button" onclick="hideForm()">Close</button>
+    </form>
 </div>
 
-<!-- Image Navigation Section (4 pictures in 2x2 matrix) -->
 <div class="gallery">
     <div>
         <img src="Aim.png" alt="Aim" onclick="window.location.href='pages/aim.html'">
@@ -273,24 +228,19 @@ document.getElementById("contactForm").addEventListener("submit", async function
     </div>
 </div>
 
-<!-- Button for Service Info with similar styling to Connect -->
 <div style="text-align: center; margin: 20px;">
     <button class="service-info-btn" onclick="window.location.href='pages/service-info.html'">Service Information</button>
 </div>
 
-<!-- Footer Section -->
 <footer>
     <p>&copy; 2024 The Elects Apostolic Church. All rights reserved.</p>
 </footer>
 
 <script>
-    // Function to show the Connect form
     function showForm() {
         document.getElementById('connectForm').style.display = 'block';
         document.getElementById('overlay').style.display = 'block';
     }
-
-    // Function to hide the Connect form
     function hideForm() {
         document.getElementById('connectForm').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
